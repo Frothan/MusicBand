@@ -1,2 +1,2 @@
-public class Trumpet {
+public class Trumpet implements iBrassInstrument {
 }

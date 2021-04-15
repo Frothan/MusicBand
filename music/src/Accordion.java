@@ -1,2 +1,2 @@
-public class Accordion {
+public class Accordion implements iKeyInstrument {
 }

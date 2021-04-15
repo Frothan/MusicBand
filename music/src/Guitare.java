@@ -1,2 +1,2 @@
-public class Guitare {
+public class Guitare implements iStringInstrument{
 }

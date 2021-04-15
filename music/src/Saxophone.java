@@ -1,3 +1,3 @@
-public class Saxophone {
+public class Saxophone implements iBrassInstrument{
 
 }

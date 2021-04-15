@@ -1,2 +1,2 @@
-public class Piano {
+public class Piano implements iKeyInstrument {
 }
