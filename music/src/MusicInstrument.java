@@ -1,6 +1,6 @@
 abstract class MusicInstrument {
 
-    //not sure if "void" is correct...
+    //not sure if return type is correct...
     public abstract void play();
     public abstract void setVolume();
     public abstract void getName();
