@@ -29,4 +29,9 @@ public class Saxophone extends MusicInstrument implements iBrassInstrument{
     public void stopPlay() {
 
     }
+
+    @Override
+    public void blow() {
+
+    }
 }

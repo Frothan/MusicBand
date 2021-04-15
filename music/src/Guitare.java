@@ -28,4 +28,9 @@ public class Guitare extends MusicInstrument implements iStringInstrument{
     public void stopPlay() {
 
     }
+
+    @Override
+    public void striking() {
+
+    }
 }

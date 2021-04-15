@@ -28,4 +28,9 @@ public class ElectricGuitare extends MusicInstrument implements iStringInstrumen
     public void stopPlay() {
 
     }
+
+    @Override
+    public void striking() {
+
+    }
 }

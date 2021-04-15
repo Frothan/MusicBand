@@ -29,4 +29,9 @@ public class Drums extends MusicInstrument implements iPercussionInstrument{
     public void stopPlay() {
 
     }
+
+    @Override
+    public void hit() {
+
+    }
 }

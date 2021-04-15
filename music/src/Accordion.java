@@ -28,4 +28,9 @@ public class Accordion extends MusicInstrument implements iKeyInstrument {
     public void stopPlay() {
 
     }
+
+    @Override
+    public void press() {
+
+    }
 }
