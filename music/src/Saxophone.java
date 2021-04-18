@@ -1,4 +1,9 @@
-public class Saxophone extends MusicInstrument implements iBrassInstrument{
+public class Saxophone implements iBrassInstrument{
+
+    @Override
+    public void blow() {
+
+    }
 
     @Override
     public void play() {
@@ -16,22 +21,12 @@ public class Saxophone extends MusicInstrument implements iBrassInstrument{
     }
 
     @Override
-    public void getPlayTime() {
-
-    }
-
-    @Override
-    public void getGenre() {
+    public void setPlayTime() {
 
     }
 
     @Override
     public void stopPlay() {
-
-    }
-
-    @Override
-    public void blow() {
 
     }
 }

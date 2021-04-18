@@ -1,3 +1,3 @@
-public interface iPercussionInstrument {
+public interface iPercussionInstrument extends iMusicInstrument {
     void hit();
 }

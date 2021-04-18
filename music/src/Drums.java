@@ -1,4 +1,4 @@
-public class Drums extends MusicInstrument implements iPercussionInstrument{
+public class Drums implements iPercussionInstrument{
 
     @Override
     public void play() {
@@ -16,12 +16,7 @@ public class Drums extends MusicInstrument implements iPercussionInstrument{
     }
 
     @Override
-    public void getPlayTime() {
-
-    }
-
-    @Override
-    public void getGenre() {
+    public void setPlayTime() {
 
     }
 

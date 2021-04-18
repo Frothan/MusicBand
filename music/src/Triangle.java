@@ -1,4 +1,5 @@
-public class Triangle extends MusicInstrument implements iPercussionInstrument{
+public class Triangle implements iPercussionInstrument{
+
     @Override
     public void play() {
 
@@ -15,12 +16,7 @@ public class Triangle extends MusicInstrument implements iPercussionInstrument{
     }
 
     @Override
-    public void getPlayTime() {
-
-    }
-
-    @Override
-    public void getGenre() {
+    public void setPlayTime() {
 
     }
 
