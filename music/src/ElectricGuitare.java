@@ -1,5 +1,6 @@
 public class ElectricGuitare implements iStringInstrument {
 
+
     @Override
     public void play() {
 
@@ -10,15 +11,14 @@ public class ElectricGuitare implements iStringInstrument {
         return 0;
     }
 
-
     @Override
-    public void getName() {
-
+    public String getName(String name) {
+        return null;
     }
 
     @Override
-    public void setPlayTime() {
-
+    public int setPlayTime(int sec) {
+        return 0;
     }
 
     @Override

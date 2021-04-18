@@ -4,6 +4,10 @@ public class Accordion implements iKeyInstrument {
 
     Scanner scanner = new Scanner(System.in);
 
+    @Override
+    public void press() {
+
+    }
 
     @Override
     public void play() {
@@ -12,41 +16,21 @@ public class Accordion implements iKeyInstrument {
 
     @Override
     public int setVolume(String instrument) {
-        int volume = scanner.nextInt(); // Read user input
-        return volume;
-
-        //--------------------------------------------------------------------------------------------------------------
-        //Das Kann in User Class übernommen werden!
-        if (volume > 80){
-            System.out.println("Wow, " + volume + "% of " + instrument + ", that's loud! Let's Party!");
-        }else if(volume < 30){
-            System.out.println(volume + "% of " + instrument + " that's quiet...");
-        }else{
-            System.out.println("Volume of ss " + instrument + ": " + volume + "%");
-        }
-        //--------------------------------------------------------------------------------------------------------------
-
+        return 0;
     }
 
     @Override
-    public void getName() {
-        String name = scanner.nextLine(); // Read user input
+    public String getName(String name) {
+        return name;
     }
 
     @Override
-    public void setPlayTime() {
-
+    public int setPlayTime(int sec) {
+        return sec;
     }
-
-
 
     @Override
     public void stopPlay() {
-        myAccordion.stop();
-    }
-
-    @Override
-    public void press() {
 
     }
 }

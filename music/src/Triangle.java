@@ -1,5 +1,6 @@
 public class Triangle implements iPercussionInstrument{
 
+
     @Override
     public void play() {
 
@@ -11,13 +12,13 @@ public class Triangle implements iPercussionInstrument{
     }
 
     @Override
-    public void getName() {
-
+    public String getName(String name) {
+        return null;
     }
 
     @Override
-    public void setPlayTime() {
-
+    public int setPlayTime(int sec) {
+        return 0;
     }
 
     @Override
