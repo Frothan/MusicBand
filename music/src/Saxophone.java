@@ -11,8 +11,8 @@ public class Saxophone implements iBrassInstrument{
     }
 
     @Override
-    public void setVolume() {
-
+    public int setVolume(String instrument) {
+        return 0;
     }
 
     @Override

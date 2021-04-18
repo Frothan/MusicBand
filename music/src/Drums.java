@@ -6,8 +6,8 @@ public class Drums implements iPercussionInstrument{
     }
 
     @Override
-    public void setVolume() {
-
+    public int setVolume(String instrument) {
+        return 0;
     }
 
     @Override

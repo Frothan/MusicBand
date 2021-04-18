@@ -11,11 +11,6 @@ public class Accordion implements iKeyInstrument {
     }
 
     @Override
-    public void setVolume() {
-
-    }
-
-    @Override
     public int setVolume(String instrument) {
         int volume = scanner.nextInt(); // Read user input
         return volume;
