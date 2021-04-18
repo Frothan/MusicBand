@@ -30,7 +30,7 @@ public class Settings {
         }else{
             System.out.println("Das Genre " + input + " existiert nicht. \n Möchtest Du die Auswahl ansehen? (J/N)");
             String inputJN = scanner.nextLine();
-            if(inputJN == "J"){
+            if(inputJN.equals("J")){
                 for (String genre : genresA) {
                     System.out.println(genresA + "\n");
                 }
