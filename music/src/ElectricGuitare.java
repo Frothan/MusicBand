@@ -10,6 +10,7 @@ public class ElectricGuitare implements iStringInstrument {
         return 0;
     }
 
+
     @Override
     public void getName() {
 

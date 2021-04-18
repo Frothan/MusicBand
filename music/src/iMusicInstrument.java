@@ -1,8 +1,9 @@
+import javazoom.jl.player.PlayerApplet;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
 public interface iMusicInstrument {
 
-    AdvancedPlayer myAccordion = new AdvancedPlayer();
+    PlayerApplet myAccordion = new PlayerApplet();
 
     void play();
     int setVolume(String instrument);
