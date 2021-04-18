@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 abstract class MusicInstrument {
@@ -5,6 +6,7 @@ abstract class MusicInstrument {
     String[] genresA = {"rock","blues","klassik","pop","country",
                        "HipHop","Jazz","Metal","Techno"};
     Scanner scanner = new Scanner(System.in);  // Create a Scanner object
+    String input;
 
     //Variable die von User eingegeben werden muss:
     public String i = null;
@@ -17,12 +19,14 @@ abstract class MusicInstrument {
 
     public void getGenre(){
         System.out.println("Welches Genre möchtest du hören?");
-        String input = scanner.nextLine();  // Read user input
-        existGenre(input).toLowerCase();
+        String input = scanner.nextLine().toLowerCase();  // Read user input
+        existGenre(input);
     }
 
-    public String existGenre(String input){
-        boolean trueOrfalse = contains(genresA, input);
+
+    //Überprüft, ob im Array vorhanden ist 1/2
+    public void existGenre(String input){
+        boolean trueOrfalse = contains(genresA, input); //Methode wird aufgerufen
         if(trueOrfalse = true){
             System.out.println("Super, du möchtest " + input + " hören.");  // Output user input
         }else{
@@ -30,24 +34,28 @@ abstract class MusicInstrument {
             String inputJN = scanner.nextLine();
             if(inputJN == "J"){
                 for (String genre : genresA) {
-                    System.out.println(genresA"\n")
+                    System.out.println(genresA"\n");
                 }
                 System.out.println("Gib ein Genre ein, dass zur Auswahl steht: ");
                 String inputGenre2 = scanner.nextLine();
+                existGenre(input);
+            }else{
+                System.out.println("Okay, tschüss.");
             }
         }
     }
 
-        //if okay --> Meldung
-        //else --> Meldunf dieses Genre exisitiert nicht, Möchtest du die Liste sehen?
+    //Überprüft, ob input konkret im Array vorhanden ist! 2/2
+    protected boolean contains(String[] genresA, String input){
+        boolean found = false;
 
-
-
-
-
-
-
-
+        for(int i = 0; i < genresA.length; i++) {
+            if(genresA[i]==input) {
+                found=true;
+            }
+        }
+        return found; //wird gespeichert in trueOrfalse
+    }
 
     public abstract void stopPlay();
 }
