@@ -1,4 +1,9 @@
+import java.util.Scanner;
+
 public class Accordion implements iKeyInstrument {
+
+    Scanner scanner = new Scanner(System.in);
+
 
     @Override
     public void play() {
@@ -39,11 +44,10 @@ public class Accordion implements iKeyInstrument {
     }
 
 
-}
 
     @Override
     public void stopPlay() {
-
+        myAccordion.stop();
     }
 
     @Override
