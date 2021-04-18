@@ -22,7 +22,7 @@ public class Accordion implements iKeyInstrument {
         }else if(volume < 30){
             System.out.println(volume + "% of " + instrument + " that's quiet...");
         }else{
-            System.out.println("Volume of s " + instrument + ": " + volume + "%");
+            System.out.println("Volume of ss " + instrument + ": " + volume + "%");
         }
         //--------------------------------------------------------------------------------------------------------------
 
