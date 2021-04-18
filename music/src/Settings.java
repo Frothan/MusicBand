@@ -1,23 +1,12 @@
-import java.util.Locale;
 import java.util.Scanner;
 
-abstract class MusicInstrument {
-
+public class Settings {
     String[] genresA = {"rock","blues","klassik","pop","country",
-                       "HipHop","Jazz","Metal","Techno"};
+            "HipHop","Jazz","Metal","Techno"};
     Scanner scanner = new Scanner(System.in);  // Create a Scanner object
     String input;
 
-    //Variable die von User eingegeben werden muss:
-    public String i = null;
-
-    //not sure if return type is correct...
-    public abstract void play();
-    public abstract void setVolume();
-    public abstract void getName();
-    public abstract void getPlayTime();
-
-//=================================================================================================================START
+    //=================================================================================================================START
 // G E N R E
     public void getGenre(){
         //--------------------------------------------------------------------------------------------------------------
@@ -66,6 +55,4 @@ abstract class MusicInstrument {
         return found; //wird gespeichert in trueOrfalse
     }
 //===================================================================================================================END
-
-    public abstract void stopPlay();
 }

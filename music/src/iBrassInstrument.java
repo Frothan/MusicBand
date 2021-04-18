@@ -1,3 +1,3 @@
-public interface iBrassInstrument {
+public interface iBrassInstrument extends iMusicInstrument {
     void blow();
 }

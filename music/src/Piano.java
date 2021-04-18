@@ -1,4 +1,10 @@
-public class Piano extends MusicInstrument implements iKeyInstrument {
+public class Piano implements iKeyInstrument {
+
+    @Override
+    public void press() {
+
+    }
+
     @Override
     public void play() {
 
@@ -15,22 +21,12 @@ public class Piano extends MusicInstrument implements iKeyInstrument {
     }
 
     @Override
-    public void getPlayTime() {
-
-    }
-
-    @Override
-    public void getGenre() {
+    public void setPlayTime() {
 
     }
 
     @Override
     public void stopPlay() {
-
-    }
-
-    @Override
-    public void press() {
 
     }
 }

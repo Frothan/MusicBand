@@ -1,3 +1,3 @@
-public interface iKeyInstrument {
+public interface iKeyInstrument extends iMusicInstrument {
     void press();
 }

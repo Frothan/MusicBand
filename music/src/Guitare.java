@@ -1,4 +1,5 @@
-public class Guitare extends MusicInstrument implements iStringInstrument{
+public class Guitare implements iStringInstrument{
+
     @Override
     public void play() {
 
@@ -15,12 +16,7 @@ public class Guitare extends MusicInstrument implements iStringInstrument{
     }
 
     @Override
-    public void getPlayTime() {
-
-    }
-
-    @Override
-    public void getGenre() {
+    public void setPlayTime() {
 
     }
 

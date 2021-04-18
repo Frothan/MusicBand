@@ -1,4 +1,10 @@
-public class Trumpet extends MusicInstrument implements iBrassInstrument {
+public class Trumpet implements iBrassInstrument {
+
+    @Override
+    public void blow() {
+
+    }
+
     @Override
     public void play() {
 
@@ -15,22 +21,12 @@ public class Trumpet extends MusicInstrument implements iBrassInstrument {
     }
 
     @Override
-    public void getPlayTime() {
-
-    }
-
-    @Override
-    public void getGenre() {
+    public void setPlayTime() {
 
     }
 
     @Override
     public void stopPlay() {
-
-    }
-
-    @Override
-    public void blow() {
 
     }
 }
