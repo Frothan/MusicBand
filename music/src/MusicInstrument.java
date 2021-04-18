@@ -17,16 +17,25 @@ abstract class MusicInstrument {
     public abstract void getName();
     public abstract void getPlayTime();
 
+//=================================================================================================================START
+// G E N R E
     public void getGenre(){
+        //--------------------------------------------------------------------------------------------------------------
+        //Das Kann in User Class übernommen werden!
         System.out.println("Welches Genre möchtest du hören?");
+        //getGenre() aufrufen
+        //--------------------------------------------------------------------------------------------------------------
+
         String input = scanner.nextLine().toLowerCase();  // Read user input
         existGenre(input);
     }
 
-
     //Überprüft, ob im Array vorhanden ist 1/2
     public void existGenre(String input){
         boolean trueOrfalse = contains(genresA, input); //Methode wird aufgerufen
+
+        //--------------------------------------------------------------------------------------------------------------
+        //Das Kann in User Class übernommen werden!
         if(trueOrfalse = true){
             System.out.println("Super, du möchtest " + input + " hören.");  // Output user input
         }else{
@@ -34,7 +43,7 @@ abstract class MusicInstrument {
             String inputJN = scanner.nextLine();
             if(inputJN == "J"){
                 for (String genre : genresA) {
-                    System.out.println(genresA"\n");
+                    System.out.println(genresA + "\n");
                 }
                 System.out.println("Gib ein Genre ein, dass zur Auswahl steht: ");
                 String inputGenre2 = scanner.nextLine();
@@ -43,12 +52,12 @@ abstract class MusicInstrument {
                 System.out.println("Okay, tschüss.");
             }
         }
+        //--------------------------------------------------------------------------------------------------------------
     }
 
     //Überprüft, ob input konkret im Array vorhanden ist! 2/2
     protected boolean contains(String[] genresA, String input){
         boolean found = false;
-
         for(int i = 0; i < genresA.length; i++) {
             if(genresA[i]==input) {
                 found=true;
@@ -56,6 +65,7 @@ abstract class MusicInstrument {
         }
         return found; //wird gespeichert in trueOrfalse
     }
+//===================================================================================================================END
 
     public abstract void stopPlay();
 }
