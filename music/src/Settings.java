@@ -4,17 +4,26 @@ public class Settings {
     //ARRAY'S:
     String[] genresA = {"rock","blues","klassik","pop","country", "hipHop","jazz","metal","techno"};
     String[] instrumentsA = {"accordion", "drums","electric guitare","guitare","piano","saxophone","triangle","trumpet"};
-    String[] optionsA = {"1: add another instrument","2: Start playing","3: set Volume"};
+    String[] optionsA = {"1: add another instrument","2: Start playing","3: set Volume", "4: Exit"};
 
     //OBJECT'S:
     Scanner scanner = new Scanner(System.in);  // Create a Scanner object
     Accordion myAccordion = new Accordion();
+    Drums myDrums = new Drums();
+    ElectricGuitare myElectricGuitare = new ElectricGuitare();
+    Guitare myGuitare = new Guitare();
+    Piano myPiano = new Piano();
+    Saxophone mySaxophone = new Saxophone();
+    Triangle myTriangle = new Triangle();
+    Trumpet myTrumpet = new Trumpet();
+
 
     //VARIABLE'S:
     String input;
 
 //=================================================================================================================START
 // I N S T R U M E N T
+
     public boolean searchInstrument(String[] instrumentsA, String instrument){
         boolean found = false;
         for(int i = 0; i < instrumentsA.length; i++) {
@@ -27,24 +36,16 @@ public class Settings {
 //-----------------------------------------------------------
 
     public void setVolumeInstrument(String finalInstrument, int volume){
-        if(finalInstrument == instrumentsA[0]){
-            myAccordion.setVolume(volume);
-        }else if(finalInstrument == instrumentsA[1]){
-            //myDrums.setVolume(volume);
-        }else if(finalInstrument == instrumentsA[2]){
-            //myElectricGuitare.setVolume(volume);
-        }else if(finalInstrument == instrumentsA[3]){
-            //myGuitare.setVolume(volume);
-        }else if(finalInstrument == instrumentsA[4]){
-            //myPiano.setVolume(volume);
-        }else if(finalInstrument == instrumentsA[5]){
-            //mySaxophone.setVolume(volume);
-        }else if(finalInstrument == instrumentsA[6]){
-            //myTriangle.setVolume(volume);
-        }else if(finalInstrument == instrumentsA[7]){
-            //myTrumpet.setVolume(volume);
-        }else{
-            System.out.println("ERROR");
+
+        switch (finalInstrument){
+            case "accordion" -> myAccordion.setVolume(volume);
+            case "drums" -> myDrums.setVolume(volume);
+            case "electric guitare" -> myElectricGuitare.setVolume(volume);
+            case "guitare" -> myGuitare.setVolume(volume);
+            case "piano" -> myPiano.setVolume(volume);
+            case "saxophone" -> mySaxophone.setVolume(volume);
+            case "triangle" -> myTriangle.setVolume(volume);
+            case "trumpet" -> myTrumpet.setVolume(volume);
         }
     }
 //===================================================================================================================END
@@ -80,24 +81,34 @@ public class Settings {
 // N A M E
 
     public void setNameInstrument(String finalInstrument){
-        if(finalInstrument == instrumentsA[0]){
-            myAccordion.setName(finalInstrument);
-        }else if(finalInstrument == instrumentsA[1]){
-            //myDrums.setName(finalInstrument);
-        }else if(finalInstrument == instrumentsA[2]){
-            //myElectricGuitare.setName(finalInstrument);
-        }else if(finalInstrument == instrumentsA[3]){
-            //myGuitare.setName(finalInstrument);
-        }else if(finalInstrument == instrumentsA[4]){
-            //myPiano.setName(finalInstrument);
-        }else if(finalInstrument == instrumentsA[5]){
-            //mySaxophone.setName(finalInstrument);
-        }else if(finalInstrument == instrumentsA[6]){
-            //myTriangle.setName(finalInstrument);
-        }else if(finalInstrument == instrumentsA[7]){
-            //myTrumpet.setName(finalInstrument);
-        }else{
-            System.out.println("ERROR");
+
+        switch (finalInstrument){
+            case "accordion": myAccordion.setName(finalInstrument);
+            case "drums": myDrums.setName(finalInstrument);
+            case "electric guitare": myElectricGuitare.setName(finalInstrument);
+            case "guitare": myGuitare.setName(finalInstrument);
+            case "piano": myPiano.setName(finalInstrument);
+            case "saxophone": mySaxophone.setName(finalInstrument);
+            case "triangle": myTriangle.setName(finalInstrument);
+            case "trumpet": myTrumpet.setName(finalInstrument);
+        }
+    }
+//===================================================================================================================END
+
+//=================================================================================================================START
+// P L A Y
+
+    public void callPlay(String finalInstrument){
+
+        switch (finalInstrument){
+            case "instruments": myAccordion.play();
+            case "drums": myDrums.play();
+            case "electric guitare": myElectricGuitare.play();
+            case "guitare": myGuitare.play();
+            case "piano": myPiano.play();
+            case "saxophone": mySaxophone.play();
+            case "triangle": myTriangle.play();
+            case "trumpet": myTrumpet.play();
         }
     }
 //===================================================================================================================END
