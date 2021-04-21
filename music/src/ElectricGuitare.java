@@ -6,13 +6,12 @@ public class ElectricGuitare implements iStringInstrument {
     }
 
     @Override
-    public int setVolume(String instrument) {
-        return 0;
+    public void setVolume(int volume) {
+
     }
 
-
     @Override
-    public void getName() {
+    public void setName(String instrument) {
 
     }
 
