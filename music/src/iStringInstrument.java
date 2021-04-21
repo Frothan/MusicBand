@@ -1,4 +1,4 @@
 public interface iStringInstrument extends iMusicInstrument {
-    void striking();
+    void striking(String instrument);
 
 }

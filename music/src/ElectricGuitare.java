@@ -1,4 +1,8 @@
 public class ElectricGuitare implements iStringInstrument {
+    //VARIABLE's
+    String name;
+    int playtime;
+    int volume;
 
     MusicPlayer musicplayer = new MusicPlayer();
 
@@ -9,17 +13,17 @@ public class ElectricGuitare implements iStringInstrument {
 
     @Override
     public void setVolume(int volume) {
-
+        this.volume = volume;
     }
 
     @Override
     public void setName(String instrument) {
-
+        this.name = instrument;
     }
 
     @Override
-    public void setPlayTime() {
-
+    public void setPlayTime(int playtime) {
+        this.playtime = playtime;
     }
 
     @Override
@@ -28,7 +32,7 @@ public class ElectricGuitare implements iStringInstrument {
     }
 
     @Override
-    public void striking() {
-
+    public void striking(String instrument) {
+        play(instrument);
     }
 }

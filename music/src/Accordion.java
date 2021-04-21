@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class Accordion implements iKeyInstrument {
     //VARIABLE's
-    String finalInstrument;
-    int finalVolume;
+    String name;
+    int playtime;
+    int volume;
 
     MusicPlayer musicplayer = new MusicPlayer();
 
@@ -14,17 +15,17 @@ public class Accordion implements iKeyInstrument {
 
     @Override
     public void setVolume(int volume) {
-        finalVolume = volume;
+        this.volume = volume;
     }
 
     @Override
     public void setName(String instrument) {
-        this.finalInstrument = instrument;
+        this.name = instrument;
     }
 
     @Override
-    public void setPlayTime() {
-
+    public void setPlayTime(int playtime) {
+        this.playtime = playtime;
     }
 
     @Override

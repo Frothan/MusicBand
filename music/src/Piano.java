@@ -17,7 +17,7 @@ public class Piano implements iKeyInstrument {
     }
 
     @Override
-    public void setPlayTime() {
+    public void setPlayTime(int playtime) {
 
     }
 

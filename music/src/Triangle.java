@@ -1,4 +1,9 @@
 public class Triangle implements iPercussionInstrument{
+    //VARIABLE's
+    String name;
+    int playtime;
+    int volume;
+
     MusicPlayer musicplayer = new MusicPlayer();
 
     @Override
@@ -8,17 +13,17 @@ public class Triangle implements iPercussionInstrument{
 
     @Override
     public void setVolume(int volume) {
-
+        this.volume = volume;
     }
 
     @Override
     public void setName(String instrument) {
-
+        this.name = instrument;
     }
 
     @Override
-    public void setPlayTime() {
-
+    public void setPlayTime(int playtime) {
+        this.playtime = playtime;
     }
 
     @Override
@@ -27,7 +32,7 @@ public class Triangle implements iPercussionInstrument{
     }
 
     @Override
-    public void hit() {
-
+    public void hit(String instrument) {
+        play(instrument);
     }
 }

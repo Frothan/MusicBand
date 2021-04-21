@@ -1,3 +1,3 @@
 public interface iPercussionInstrument extends iMusicInstrument {
-    void hit();
+    void hit(String instrument);
 }
