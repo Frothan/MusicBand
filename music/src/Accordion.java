@@ -5,14 +5,11 @@ public class Accordion implements iKeyInstrument {
     String finalInstrument;
     int finalVolume;
 
-    @Override
-    public void press() {
-
-    }
+    MusicPlayer musicplayer = new MusicPlayer();
 
     @Override
-    public void play() {
-
+    public void play(String instrument) {
+        musicplayer.playSample(instrument);
     }
 
     @Override
@@ -33,5 +30,10 @@ public class Accordion implements iKeyInstrument {
     @Override
     public void stopPlay() {
 
+    }
+
+    @Override
+    public void press(String instrument) {
+        play(instrument);
     }
 }

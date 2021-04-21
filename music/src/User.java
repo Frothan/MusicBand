@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class User {
 
-    //create objects:
     Settings mySettings = new Settings();
     //Accordion myAccordion = new Accordion();
     Scanner scanner = new Scanner(System.in);
@@ -85,7 +84,9 @@ public class User {
                 String instrument = null;
                 whichInstrument(); // -->2 (add Instrument)
             }else if(place == 1){
-                System.out.println("Hier wird Methode aufgerufen 1"); // -->5.1 (Play)
+                System.out.println("Hier wird Methode aufgerufen 1");
+                Piano myPiano = new Piano();
+                myPiano.play("music/piano/piano01.mp3");// -->5.1 (Play)
             }else{
                 whichVolume(); // -->5.2
             }
@@ -111,5 +112,45 @@ public class User {
         whichOption(); // -->4
     }
 //----------------------------------------------------------------------------------------------------------------------
+
+
+//Bismillah code
+/*
+    // Class User variables
+    String input = "";
+
+    // Objects instantiation
+   // Create a Scanner object
+    Settings musicSettings = new Settings();
+    instrumentSettings instrumentList= new instrumentSettings();
+
+
+
+
+
+    public void startTheProgram() {
+        do {
+            System.out.println("To play an instrument please choose from one of the following genres:");
+            System.out.println("Genres list : ");
+            for (String genres : musicSettings.genresA) {
+                System.out.println(genres);
+            }
+            //musicSettings.searchGenre(musicSettings.genresA, );
+
+            System.out.println("Now What kind of instrument would you like to play");
+
+            instrumentList.getInstrument();
+
+            System.out.println("Piano and Accordion ");
+            input = scanner.nextLine().toLowerCase();
+
+            System.out.println("To end the program please enter end:");
+            System.out.println("---------------------------------------------------");
+
+        }
+        while (!input.equals("end"));
+    }
+
+ */
 }
 

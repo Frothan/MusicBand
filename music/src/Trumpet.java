@@ -1,13 +1,15 @@
 public class Trumpet implements iBrassInstrument {
 
+    MusicPlayer musicplayer = new MusicPlayer();
+
     @Override
     public void blow() {
 
     }
 
     @Override
-    public void play() {
-
+    public void play(String instrument) {
+        musicplayer.playSample(instrument);
     }
 
     @Override

@@ -1,8 +1,10 @@
 public class ElectricGuitare implements iStringInstrument {
 
-    @Override
-    public void play() {
+    MusicPlayer musicplayer = new MusicPlayer();
 
+    @Override
+    public void play(String instrument) {
+        musicplayer.playSample(instrument);
     }
 
     @Override

@@ -1,8 +1,9 @@
 public class Triangle implements iPercussionInstrument{
+    MusicPlayer musicplayer = new MusicPlayer();
 
     @Override
-    public void play() {
-
+    public void play(String instrument) {
+        musicplayer.playSample(instrument);
     }
 
     @Override

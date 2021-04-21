@@ -1,13 +1,9 @@
 public class Piano implements iKeyInstrument {
+    MusicPlayer musicplayer = new MusicPlayer();
 
     @Override
-    public void press() {
-
-    }
-
-    @Override
-    public void play() {
-
+    public void play(String instrument) {
+        musicplayer.playSample(instrument);
     }
 
     @Override
@@ -28,5 +24,10 @@ public class Piano implements iKeyInstrument {
     @Override
     public void stopPlay() {
 
+    }
+
+    @Override
+    public void press(String instrument) {
+        play(instrument);
     }
 }
