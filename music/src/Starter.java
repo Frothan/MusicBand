@@ -5,10 +5,6 @@ public class Starter {
 
         MusicOrganizer organizer= new MusicOrganizer();
         Track myTrack = new Track("a","b","c");
-        //create objects:
-
-
-
 
         //call method:
         myUser.userStart();
