@@ -32,7 +32,8 @@ public class Guitare implements iStringInstrument{
     }
 
     @Override
-    public void striking(String instrument) {
+    public void striking(String instrument, int playtime) {
+        System.out.println("This hands play magic");
         play(instrument);
     }
 }

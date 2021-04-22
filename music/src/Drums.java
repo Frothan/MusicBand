@@ -32,7 +32,8 @@ public class Drums implements iPercussionInstrument{
     }
 
     @Override
-    public void hit(String instrument) {
+    public void hit(String instrument, int playtime) {
+        System.out.println("The Drums are getting hit! Yeaah!!!");
         play(instrument);
     }
 }

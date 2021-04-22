@@ -32,7 +32,8 @@ public class Trumpet implements iBrassInstrument {
     }
 
     @Override
-    public void blow(String instrument) {
+    public void blow(String instrument, int playtime) {
+        System.out.println("Sounds great! Yeaah!!!");
         play(instrument);
     }
 }

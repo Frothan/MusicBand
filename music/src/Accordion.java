@@ -34,7 +34,9 @@ public class Accordion implements iKeyInstrument {
     }
 
     @Override
-    public void press(String instrument) {
+    public void press(String instrument, int playtime) {
+        System.out.println("The Pads are getting pressed! Yeaah!!!");
+        setPlayTime(playtime);
         play(instrument);
     }
 }

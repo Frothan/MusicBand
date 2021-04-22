@@ -32,7 +32,10 @@ public class ElectricGuitare implements iStringInstrument {
     }
 
     @Override
-    public void striking(String instrument) {
+    public void striking(String instrument, int playtime) {
+        System.out.println("Rock and Roll! Yeaah!!!");
         play(instrument);
     }
 }
+
+

@@ -32,7 +32,8 @@ public class Triangle implements iPercussionInstrument{
     }
 
     @Override
-    public void hit(String instrument) {
+    public void hit(String instrument, int playtime) {
+        System.out.println("Thats a funny instrument in a band! Lol!!!");
         play(instrument);
     }
 }

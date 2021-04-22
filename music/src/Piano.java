@@ -1,4 +1,9 @@
 public class Piano implements iKeyInstrument {
+    //VARIABLE's
+    String name;
+    int playtime;
+    int volume;
+
     MusicPlayer musicplayer = new MusicPlayer();
 
     @Override
@@ -8,17 +13,17 @@ public class Piano implements iKeyInstrument {
 
     @Override
     public void setVolume(int volume) {
-
+        this.volume = volume;
     }
 
     @Override
     public void setName(String instrument) {
-
+        this.name = instrument;
     }
 
     @Override
     public void setPlayTime(int playtime) {
-
+            this.playtime = playtime;
     }
 
     @Override
@@ -27,7 +32,9 @@ public class Piano implements iKeyInstrument {
     }
 
     @Override
-    public void press(String instrument) {
+    public void press(String instrument, int playtime) {
+        System.out.println("The Pads are getting pressed! Yeaah!!!");
+        setPlayTime(playtime);
         play(instrument);
     }
 }

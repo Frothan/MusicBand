@@ -32,7 +32,8 @@ public class Saxophone implements iBrassInstrument{
     }
 
     @Override
-    public void blow(String instrument) {
+    public void blow(String instrument, int playtime) {
+        System.out.println("Wow great sound! Yeaah!!!");
         play(instrument);
     }
 }

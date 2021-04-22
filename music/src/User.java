@@ -90,6 +90,7 @@ public class User {
                         whichInstrument(); // -->2 (add Instrument)
                     case 2:
                         callPlay(finalInstrument); // -->5.1 (Play)
+                        whichOption();
                     case 3:
                         whichVolume(); // -->5.2
                     case 4:

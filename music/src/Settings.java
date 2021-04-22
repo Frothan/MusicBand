@@ -101,14 +101,14 @@ public class Settings {
     public void callPlay(String finalInstrument, int playtime){
 
         switch (finalInstrument){
-            case "accordion": myAccordion.play("music/piano/piano01.mp3");
-            case "drums": myDrums.play("music/piano/piano01.mp3");
-            case "electric guitare": myElectricGuitare.play("music/piano/piano01.mp3");
-            case "guitare": myGuitare.play("music/piano/piano01.mp3");
-            case "piano": myPiano.play("music/piano/piano01.mp3");
-            case "saxophone": mySaxophone.play("music/piano/piano01.mp3");
-            case "triangle": myTriangle.play("music/piano/piano01.mp3");
-            case "trumpet": myTrumpet.play("music/piano/piano01.mp3");
+            case "accordion": myAccordion.press("music/piano/piano01.mp3", playtime);
+            case "drums": myDrums.hit("music/piano/piano01.mp3", playtime);
+            case "electric guitare": myElectricGuitare.striking("music/piano/piano01.mp3", playtime);
+            case "guitare": myGuitare.striking("music/piano/piano01.mp3", playtime);
+            case "piano": myPiano.press("music/piano/piano01.mp3",playtime);
+            case "saxophone": mySaxophone.blow("music/piano/piano01.mp3", playtime);
+            case "triangle": myTriangle.hit("music/piano/piano01.mp3", playtime);
+            case "trumpet": myTrumpet.blow("music/piano/piano01.mp3", playtime);
         }
     }
 //===================================================================================================================END
