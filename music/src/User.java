@@ -1,4 +1,5 @@
 import java.util.InputMismatchException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class User {
@@ -7,8 +8,11 @@ public class User {
     Settings mySettings = new Settings();
     Scanner scanner = new Scanner(System.in);
 
+    MusicPlayer musicPlayer = new MusicPlayer();
+
     //variables:
     public String finalInstrument;
+    boolean exist;
 
 //----------------------------------------------------------------------------------------------------------------------
     // 1
@@ -21,23 +25,23 @@ public class User {
 //----------------------------------------------------------------------------------------------------------------------
     // 2
     public void whichInstrument() {
-        System.out.println("\nWhich instrument do you want to listen?");
+        System.out.println("\nWhich instrument do you want to listen?" + " " + "Please choose one of the following:");
+        System.out.println("List of all instruments: ");
+        for (String inst : mySettings.instrumentsA) {
+            System.out.println(inst);
+        }
         try{
             String instrument = scanner.nextLine().toLowerCase();
-            boolean trueFalse = mySettings.searchInstrument(mySettings.instrumentsA, instrument);
-            if (trueFalse == true) {
+            exist = mySettings.searchInstrument(mySettings.instrumentsA, instrument);
+            if (exist) {
                 System.out.println("\nSelected instrument: " + instrument);
                 this.finalInstrument = instrument;
                 mySettings.setNameInstrument(finalInstrument);
                 whichGenre(); // -->3
             } else {
-                System.out.println("\nInstrument doesn't exist!\nDo you want to see the options?(Y/N)");
-                String inputJN = scanner.nextLine();
-                if (inputJN.equals("Y")) {
-                    for (String ins : mySettings.instrumentsA) {
-                        System.out.print(ins + ", ");
-                    }
-                    System.out.println("\nEnter an instrument, which belongs to the upper list: ");
+                System.out.println("\nInstrument doesn't exist!\nDo you want to see the options?(y/n)");
+                String inputJN = scanner.nextLine().toLowerCase();
+                if (inputJN.equals("y")) {
                     whichInstrument();
                 } else {
                     System.out.println("\nOkay, bye.");
@@ -53,19 +57,19 @@ public class User {
     // 3
     public void whichGenre() {
         System.out.println("\nWhich genre do you want to listen?");
+        System.out.println("List of all genres: ");
+        for (String genres : mySettings.genresA) {
+            System.out.println(genres);
+        }
         String genre = scanner.nextLine().toLowerCase();
-        boolean trueFalse = mySettings.searchGenre(mySettings.genresA, genre);
-        if (trueFalse == true) {
+        exist = mySettings.searchGenre(mySettings.genresA, genre);
+        if (exist) {
             System.out.println("\nSelected genre: " + genre);
             whichOption(); // -->4
         } else {
-            System.out.println("\nGenre doesn't exist!\nDo you want to see the options?(Y/N)");
-            String inputJN = scanner.nextLine();
-            if (inputJN.equals("Y")) {
-                for (String gen : mySettings.genresA) {
-                    System.out.print(gen + ", ");
-                }
-                System.out.println("\nEnter a genre, which belongs to the upper list: ");
+            System.out.println("\nGenre doesn't exist!\nDo you want to see the options?(y/n)");
+            String inputJN = scanner.nextLine().toLowerCase();
+            if (inputJN.equals("y")) {
                 whichGenre();
             } else {
                 System.out.println("\nOkay, bye.");
@@ -77,7 +81,7 @@ public class User {
 
     // 4
     public void whichOption() {
-        System.out.println("\nChoose a option (enter a number)");
+        System.out.println("\nChoose an option (enter a number):");
         int counter = mySettings.showCountOption();
         try {
             int option = scanner.nextInt();
@@ -94,10 +98,10 @@ public class User {
                     case 3:
                         whichVolume(); // -->5.2
                     case 4:
-                        System.out.println("Okay, bye.");
+                        System.exit(0);
                 }
             }
-        }catch(InputMismatchException e){
+        }catch(InputMismatchException e) {
             System.out.println("\ninvalid input! Next time you have to enter a number!");
         }
     }
@@ -107,7 +111,7 @@ public class User {
         System.out.println("\nEnter your playtime[s]:");
         try{
             int playtime = scanner.nextInt();
-            System.out.println("\nSuper, you hear " + finalInstrument + " " + playtime+ " seconds." );
+            System.out.println("\nSuper, you hear " + finalInstrument + " " + "for " + playtime + " seconds." );
             mySettings.callPlay(finalInstrument, playtime);
             whichOption(); // -->4
         }catch(InputMismatchException e){
