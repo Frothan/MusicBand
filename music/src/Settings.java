@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Settings {
     //ARRAY'S:
-    String[] genresA = {"rock","blues","klassik","pop","country", "hipHop","jazz","metal","techno"};
-    String[] instrumentsA = {"accordion", "drums","electric guitare","guitare","piano","saxophone","triangle","trumpet"};
-    String[] optionsA = {"1: add another instrument","2: Start playing","3: set Volume", "4: Exit"};
+    String[] genresA = {"rock", "blues", "klassik", "pop", "country", "hipHop", "jazz", "metal", "techno"};
+    String[] instrumentsA = {"accordion", "drums", "electric guitare", "guitare", "piano", "saxophone", "triangle", "trumpet"};
+    String[] optionsA = {"1: add another instrument", "2: Start playing", "3: set Volume", "4: Exit"};
 
     //OBJECT'S:
     Scanner scanner = new Scanner(System.in);  // Create a Scanner object
@@ -21,7 +21,7 @@ public class Settings {
 //=================================================================================================================START
 // I N S T R U M E N T
 
-    public boolean searchInstrument(String[] instrumentsA, String instrument){
+    public boolean searchInstrument(String[] instrumentsA, String instrument) {
         boolean found = false;
         for (String s : instrumentsA) {
             if (s.equals(instrument)) {
@@ -33,9 +33,9 @@ public class Settings {
     }
 //-----------------------------------------------------------
 
-    public void setVolumeInstrument(String finalInstrument, int volume){
+    public void setVolumeInstrument(String finalInstrument, int volume) {
 
-        switch (finalInstrument){
+        switch (finalInstrument) {
             case "accordion" -> myAccordion.setVolume(volume);
             case "drums" -> myDrums.setVolume(volume);
             case "electric guitare" -> myElectricGuitare.setVolume(volume);
@@ -51,7 +51,7 @@ public class Settings {
 //=================================================================================================================START
 // G E N R E
 
-    public boolean searchGenre(String[] genresA, String genre){
+    public boolean searchGenre(String[] genresA, String genre) {
         boolean found = false;
         for (String s : genresA) {
             if (s.equals(genre)) {
@@ -66,11 +66,11 @@ public class Settings {
 //=================================================================================================================START
 // O P T I O N
 
-    public int showCountOption(){
+    public int showCountOption() {
         int counter = 0;
-        for (String opt: optionsA) {
+        for (String opt : optionsA) {
             System.out.println(opt);
-            counter ++;
+            counter++;
         }
         return counter;
     }
@@ -79,7 +79,7 @@ public class Settings {
 //=================================================================================================================START
 // N A M E
 
-    public void setNameInstrument(String finalInstrument){
+    public void setNameInstrument(String finalInstrument) {
         switch (finalInstrument) {
             case "accordion" -> myAccordion.setName(finalInstrument);
             case "drums" -> myDrums.setName(finalInstrument);
@@ -96,18 +96,19 @@ public class Settings {
 //=================================================================================================================START
 // P L A Y
 
-    public void callPlay(String finalInstrument, int playtime){
+    public void callPlay(String finalInstrument, int playtime) {
 
         switch (finalInstrument) {
-            case "accordion" -> myAccordion.press("music/piano/piano01.mp3", playtime);
-            case "drums" -> myDrums.hit("music/piano/piano01.mp3", playtime);
-            case "electric guitare" -> myElectricGuitare.striking("music/piano/piano01.mp3", playtime);
-            case "guitare" -> myGuitare.striking("music/piano/piano01.mp3", playtime);
-            case "piano" -> myPiano.press("music/piano/piano01.mp3", playtime);
-            case "saxophone" -> mySaxophone.blow("music/piano/piano01.mp3", playtime);
-            case "triangle" -> myTriangle.hit("music/piano/piano01.mp3", playtime);
-            case "trumpet" -> myTrumpet.blow("music/piano/piano01.mp3", playtime);
+            case "accordion" -> myAccordion.press("music/tracks/acco.mp3", playtime);
+            case "drums" -> myDrums.hit("music/tracks/drum.mp3", playtime);
+            case "electric guitare" -> myElectricGuitare.striking("music/tracks/egui.mp3", playtime);
+            case "guitare" -> myGuitare.striking("music/tracks/guit.mp3", playtime);
+            case "piano" -> myPiano.press("music/tracks/piano01.mp3", playtime);
+            case "saxophone" -> mySaxophone.blow("music/tracks/saxo.mp3", playtime);
+            case "triangle" -> myTriangle.hit("music/tracks/trian.mp3", playtime);
+            case "trumpet" -> myTrumpet.blow("music/tracks/trum.mp3", playtime);
+
         }
-    }
 //===================================================================================================================END
+    }
 }
