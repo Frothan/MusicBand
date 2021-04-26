@@ -1,28 +1,30 @@
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
+public class UserTest {
 
-class UserTest {
+    /*WHAT DOES EXACTLY THE FOLLOWING TEST UNIT DO*/
 
-    @org.junit.jupiter.api.Test
-    void userStart() {
-    }
+    //It has an array which covers all instruments name
 
-    @org.junit.jupiter.api.Test
-    void whichInstrument() {
-    }
+    //It has a test array which has not the same index length but not the same value
 
-    @org.junit.jupiter.api.Test
-    void whichGenre() {
-    }
+    //It will check whether the values provided in resultInstruments are matching with the original expectedInstruments array
 
-    @org.junit.jupiter.api.Test
-    void whichOption() {
-    }
+    //The test will fail till the expectedInstruments and resultInstruments are identical
 
-    @org.junit.jupiter.api.Test
-    void callPlay() {
-    }
+    //With following two arrays, every test case for each individual instrument in the list is covered
 
-    @org.junit.jupiter.api.Test
-    void whichVolume() {
+    //To see whether the test passes, please change the "forTest" to "accordion" and see the result in console
+
+    @org.junit.Test
+    public void assertArrayEquals() {
+        String[] expectedInstruments = {"accordion", "drums", "electric guitare", "guitare", "piano", "saxophone", "triangle", "trumpet"};
+        String[] resultInstrumets = {"forTest", "drums", "electric guitare", "guitare", "piano", "saxophone", "triangle", "trumpet"};
+        Assert.assertArrayEquals(expectedInstruments, resultInstrumets);
+
     }
 }
+
+
+
+
+

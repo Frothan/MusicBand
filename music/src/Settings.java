@@ -18,17 +18,15 @@ public class Settings {
     Trumpet myTrumpet = new Trumpet();
 
 
-    //VARIABLE'S:
-    String input;
-
 //=================================================================================================================START
 // I N S T R U M E N T
 
     public boolean searchInstrument(String[] instrumentsA, String instrument){
         boolean found = false;
-        for(int i = 0; i < instrumentsA.length; i++) {
-            if(instrumentsA[i].equals(instrument)) {
-                found=true;
+        for (String s : instrumentsA) {
+            if (s.equals(instrument)) {
+                found = true;
+                break;
             }
         }
         return found; //wird gespeichert in trueOrfalse
@@ -55,9 +53,10 @@ public class Settings {
 
     public boolean searchGenre(String[] genresA, String genre){
         boolean found = false;
-        for(int i = 0; i < genresA.length; i++) {
-            if(genresA[i].equals(genre)) {
-                found=true;
+        for (String s : genresA) {
+            if (s.equals(genre)) {
+                found = true;
+                break;
             }
         }
         return found; //wird gespeichert in trueOrfalse
@@ -81,16 +80,15 @@ public class Settings {
 // N A M E
 
     public void setNameInstrument(String finalInstrument){
-
-        switch (finalInstrument){
-            case "accordion": myAccordion.setName(finalInstrument);
-            case "drums": myDrums.setName(finalInstrument);
-            case "electric guitare": myElectricGuitare.setName(finalInstrument);
-            case "guitare": myGuitare.setName(finalInstrument);
-            case "piano": myPiano.setName(finalInstrument);
-            case "saxophone": mySaxophone.setName(finalInstrument);
-            case "triangle": myTriangle.setName(finalInstrument);
-            case "trumpet": myTrumpet.setName(finalInstrument);
+        switch (finalInstrument) {
+            case "accordion" -> myAccordion.setName(finalInstrument);
+            case "drums" -> myDrums.setName(finalInstrument);
+            case "electric guitare" -> myElectricGuitare.setName(finalInstrument);
+            case "guitare" -> myGuitare.setName(finalInstrument);
+            case "piano" -> myPiano.setName(finalInstrument);
+            case "saxophone" -> mySaxophone.setName(finalInstrument);
+            case "triangle" -> myTriangle.setName(finalInstrument);
+            case "trumpet" -> myTrumpet.setName(finalInstrument);
         }
     }
 //===================================================================================================================END
@@ -99,15 +97,16 @@ public class Settings {
 // P L A Y
 
     public void callPlay(String finalInstrument, int playtime){
-        switch (finalInstrument){
-            case "accordion" -> myAccordion.press("music/piano/acco.mp3", playtime);
-            case "drums" -> myDrums.hit("music/piano/drum.mp3", playtime);
-            case "electric guitare" -> myElectricGuitare.striking("music/piano/egui.mp3", playtime);
-            case "guitare" -> myGuitare.striking("music/piano/guit.mp3", playtime);
+
+        switch (finalInstrument) {
+            case "accordion" -> myAccordion.press("music/piano/piano01.mp3", playtime);
+            case "drums" -> myDrums.hit("music/piano/piano01.mp3", playtime);
+            case "electric guitare" -> myElectricGuitare.striking("music/piano/piano01.mp3", playtime);
+            case "guitare" -> myGuitare.striking("music/piano/piano01.mp3", playtime);
             case "piano" -> myPiano.press("music/piano/piano01.mp3", playtime);
-            case "saxophone" -> mySaxophone.blow("music/piano/saxo.mp3", playtime);
-            case "triangle" -> myTriangle.hit("music/piano/trian.mp3", playtime);
-            case "trumpet" -> myTrumpet.blow("music/piano/trum.mp3", playtime);
+            case "saxophone" -> mySaxophone.blow("music/piano/piano01.mp3", playtime);
+            case "triangle" -> myTriangle.hit("music/piano/piano01.mp3", playtime);
+            case "trumpet" -> myTrumpet.blow("music/piano/piano01.mp3", playtime);
         }
     }
 //===================================================================================================================END

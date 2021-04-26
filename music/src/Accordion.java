@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Accordion implements iKeyInstrument {
     //VARIABLE's
     String name;

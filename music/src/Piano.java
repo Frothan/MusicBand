@@ -1,4 +1,5 @@
 public class Piano implements iKeyInstrument {
+
     //VARIABLE's
     String name;
     int playtime;
@@ -28,7 +29,7 @@ public class Piano implements iKeyInstrument {
 
     @Override
     public void stopPlay() {
-
+        musicplayer.stop();
     }
 
     @Override

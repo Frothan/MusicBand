@@ -5,6 +5,5 @@ public interface iMusicInstrument {
     void setName(String instrument);
     void setPlayTime(int playtime);
     void stopPlay();
-
 }
 
